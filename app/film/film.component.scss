@@ -1,0 +1,24 @@
+ul{
+    display: flex;
+   
+    li{
+        flex: 1;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        list-style: none;
+        outline: none;
+    }
+}
+.active{
+    border-bottom: 5px solid #fe6e00;
+    color: #fe6e00;
+
+}
+div ul{
+     border-bottom: 1px solid #fe6e00
+}
+
+.film{
+    margin-top: 50px;
+}

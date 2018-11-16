@@ -1,0 +1,17 @@
+
+<app-navbar>
+  <i class="iconfont icon-gengduo1" (click)="isHidden=!isHidden"></i>
+</app-navbar>
+
+
+
+<app-sidebar [hidden]="isHidden">
+    <ul  (click)="isHidden=!isHidden">
+        <li routerLink="/home" routerLinkActive="active">home</li>
+        <li routerLink="/film" routerLinkActive="active">film</li>
+        <li routerLink="/card" routerLinkActive="active">card</li>
+      </ul>
+</app-sidebar>
+
+
+<router-outlet></router-outlet>

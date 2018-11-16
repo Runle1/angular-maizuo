@@ -1,0 +1,32 @@
+<ul  infiniteScroll
+          [infiniteScrollDistance]="0"
+          [infiniteScrollThrottle]="50"
+          (scrolled)="onScroll()"
+          [infiniteScrollDisabled] = "disabled"
+          >
+  <li *ngFor="let data of datalist" [routerLink]="['/detail',data.id]">
+    <img [src]="data.poster.origin"/>
+    <h3>{{data.name}}</h3>
+  </li>
+</ul>
+
+<!-- <div>
+  <dl
+      infiniteScroll
+      [infiniteScrollDistance]="0"
+      [infiniteScrollThrottle]="50"
+      (scrolled)="onScroll()"
+      [infiniteScrollDisabled] = "disabled">
+      <div *ngFor="let data of datalist" [routerLink]="['/detail',data.id]">
+      <dt>
+          <img [src]="data.poster.origin"/>
+      </dt>
+      <dd>
+          <p>{{data.name}}</p>
+          <p>{{data.intro}}</p>
+          <p>{{data.cinemaCount}}家影院上映<mark>{{data.watchCount}}</mark>人购票</p>
+          <span class="score">{{data.grade}}</span>
+      </dd>
+    </div>
+  </dl>
+</div> -->

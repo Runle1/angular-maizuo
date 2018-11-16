@@ -1,0 +1,28 @@
+<swiper [config]="config">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let data of datalist">
+        <img [src]="data.cover.origin"/>
+      </div>   
+  </div>
+  <div class="swiper-pagination"></div>
+  </swiper>
+<div class="body">
+  <dl  *ngFor="let data of datalist"
+  infiniteScroll
+          [infiniteScrollDistance]="0"
+          [infiniteScrollThrottle]="50"
+          (scrolled)="onScroll()"
+          [infiniteScrollDisabled] = "disabled"
+  >
+    <dt>
+        <img [src]="data.cover.origin"/>
+    </dt>
+    <dd>
+        <p>{{data.name}}</p>
+        <p>{{data.cinemaCount}}家影院上映<mark>{{data.watchCount}}</mark>人购票</p>
+        <span class="score">{{data.grade}}</span>
+    </dd>
+
+
+  </dl>
+</div>
